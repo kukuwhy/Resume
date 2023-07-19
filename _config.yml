@@ -48,12 +48,22 @@ instagram_username: kyuxxn
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
+  저는 **최신 기술에 대한 끊임 없는 호기심**을 가지고 있습니다. 그리고 실패와 시도를 두려워하지 않으며, 그것들에서 교훈을 찾아내 항상 성장하는 엔지니어 입니다.  
 
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+  4년차 Security Engineer로서 다양한 기업에 구축된 IT 인프라에 대한 공격 시나리오 도출, 모의해킹, 취약점 분석 및 그에 따른 보안 대응방안 설계 등 보안 컨설턴트 업무를 수행하고 있습니다.
+
+  세부적으로는 보안 솔루션에 대한 **Frida를 이용한 보안성 검증,  CVE 취약점 분석,  AD 도메인 내 횡적 이동 및 포스트 익스플로잇 등의 기법, OSINT를 이용한 정보 수집** 등의 지식과 수행능력을 보유하고 있습니다.
+
+  부가적으로 **파이썬을 활용해 해킹 도구를 제작하거나 업무 프로세스를 자동화하는 등 개발 활동**에도 능숙합니다.
+
+  위와 같이 진단/분석 노하우를 통해 비즈니스 로직에 대한 어뷰징, 개인정보 유출, 내부시스템 침투 포인트 등에 대한 선제 탐지 등 취약점 분석 능력을 바탕으로 Security Engineer 역할을 실현하고 있습니다.
+
+  마지막으로 저는 **커뮤니케이션의 가치**를 중요하게 생각하고 있습니다. ‘논쟁’보다는 ‘토론’을 선호하며 소통이 적은 것보다는 많은 것이 좋다고 믿습니다. 
+
+  읽어주셔서 감사합니다.
 
 content:
-  - title: Projects # Title for the section
+  - title: Skills # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
@@ -113,8 +123,26 @@ content:
 
             외부에서는 **OSINT를 활용**하여 위협에 노출되는 고객의 자산 및 다크웹 내 중요 정보 유출을 모니터링하여 침투에 사용될 정보를 수집했으며, 서비스 취약점을 통해 내부 네트워크로 침투 하였습니다.
 
-            내부에서는 **Active Directory 공격 기법을 활용**하여 횡적 이동 및 포스트 익스플로잇 공격을 시도 했습니다. 그 결과 고객의 내부 중요 자산의 제어권을 장악하고 중요 정보를 탈취에 성공했습니다
+            내부에서는 **Active Directory 공격 기법을 활용**하여 횡적 이동 및 포스트 익스플로잇 공격을 시도 했습니다. 그 결과 고객의 내부 중요 자산의 제어권을 장악하고 중요 정보를 탈취에 성공했습니다<br><br>
+            
+            
+            ## 서비스 취약점 점검
+            Web/Android/iOS/CS/IoT 등 **다양한 형태의 서비스 취약점 점검을 수행**했습니다.
 
+            서비스의 취약점을 점검하고 도출된 취약점에 대한 상세 내용, 취약점 발생 원인, 보안대책을 수립했습니다.
+
+            모바일 앱에서 사용되는 보안 솔루션에 대해 리버싱으로 루팅/탈옥 탐지, 무결성 탐지, 디버깅 탐지 등의 보호 기능의 보안성을 검증했습니다.
+
+            고객사의 환경에 맞는 체크리스트를 기반으로 취약점을 도출했으며, 도출된 취약점과 관련 시스템에 미치는 영향에 대해 분석하였습니다. 최우선적으로 비즈니스에 영향도가 높은 취약점들을 중심적으로 분석했으며 그 결과 **고객맞춤의 최적의 보호 대책을 제시**하는 성과를 거두었습니다.<br><br>
+
+
+            ## IoT 점검 가이드 작업
+            최근 IoT 기술이 홈케어, 헬스케어, 자동차 등의 다양한 분야에 적용되면서 IoT 취약점 점검에 대한 수요가 크게 증가함에 따라 **IoT 취약점 점검 가이드 제안 연구에 참여**했습니다.
+
+            IoT 장비의 공격 표면이 될 수 있는 **RF, RFID, WI-Fi, Bluetooth, UART, SWD, Zigbee, Flash Memory, Firmware 취약점을 분석**했습니다.
+
+            테스트는 시중에 판매되는 아파트 보안경보 시스템 및 IP 카메라,  AI 스피커를 통해 진행 되었으며 유의미한 점검 결과를 통해 IoT 제품을 검증할 수 있는 역량을 기를 수 있었습니다.
+            
             
 
   - title: Education # Title for the section
