@@ -11,6 +11,7 @@ title: Security Engineer
 email: kukuwhy6@gmail.com
 website: https://kukuwhy.github.io
 
+
 # Dark Mode (true/false/never)
 darkmode: false
 
@@ -56,7 +57,8 @@ about_content: | # this will include new lines to allow paragraphs
 
   읽어주셔서 감사합니다.
   
-  
+  <br><br>
+  PDF로 출력된 이력서가 읽기 힘드시다면 [링크](https://kukuwhy.github.io/Resume)로 접근해주세요.
 
 content:
   - title: Key Expertise
