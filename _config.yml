@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: 김규완
-title: Security Engineer  
+title: Security Engineer
 email: kukuwhy6@gmail.com
 website: https://kukuwhy.github.io
 
@@ -16,132 +16,167 @@ website: https://kukuwhy.github.io
 darkmode: false
 
 # Social links
-#twitter_username: facespics
 github_username:  kukuwhy
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
 instagram_username: kyuxxn
-#linkedin_username: jameswgrant
-# xing_username: jekyll
-# pinterest_username: jekyll
-#youtube_username: globalmtb
-# googleplus_username: +jekyll
-# orcid_username: 0000-0000-0000-0000
-
-# Additional icon links
-# additional_links:
-# - title: itsgoingto.be
-#   icon: fas fa-globe
-#   url: https://www.itsgoingto.be
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
-#   url: Link url (eg. https://google.com)
-
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
 
 # About Section
 # about_title: About Me
 about_profile_image: images/profile1.jpg
 about_content: | # this will include new lines to allow paragraphs
-  제 이름은 김규완입니다. 저는 **서비스 보안 엔지니어**로 일하고 있습니다.  
+  공격자 관점의 모의해킹에서 출발해 **제품 보안**과 **보안 자동화**로 전환한 8년차 Security Engineer입니다.
 
-  복잡하고 어려운 문제를 기술적인 자동화로 해결하는 것을 좋아합니다.
+  AI Agent로 보안 리뷰·펜테스트 워크플로우를 통합해 며칠 단위로 걸리던 리뷰를 PR 단위로 압축했고, 위협 모델링·Bug Bounty 프로그램 설계·Shift Left SDLC 리뷰로 **설계 단계에서 위협을 줄이는 일**에 집중합니다.
 
-  서비스 보안 분야를 제외하고도 모든 보안 영역을 포함한 개발 및 인프라 기술에 관심이 많습니다.
+  복잡하고 어려운 보안 문제를 도구 및 자동화로 풀어내는 것을 좋아하며, 보안 엔지니어는 코드 및 인프라 환경에 대해 상대적으로 높은 이해를 가지는 것이 중요한 덕목이라 믿고 끊임없이 학습하고 있습니다.
 
-  읽어주셔서 감사합니다.
-  
   <br><br>
   PDF로 출력된 이력서가 읽기 힘드시다면 [링크](https://kukuwhy.github.io/Resume)로 접근해주세요.
 
 content:
-  - title: Key Expertise
+  - title: Key Highlights
     layout: text
     content: | # this will include new lines to allow paragraphs
-      - API, Web/App(iOS,Android), C/S, IoT 취약점 점검
-      - Web/App 소스코드 취약점 점검 
-      - 시나리오 기반 인프라 모의침투
-      - 보안 프로세스/취약점 점검 자동화 시스템 개발
-      - K-Shield Jr. 11기 멘토
-      - 인프라 취약점 점검(OS, Container, Image)
-      - 커뮤니케이션 및 문서 작성
+      - SDLC 보안 리뷰 **40+건** 직접 수행, 고위험 설계 이슈를 출시 전 차단
+      - User Security 기능 신규 런칭으로 거래소 보안 평가(CER) **D → AAA** 견인 (90점, 글로벌 10위)
+      - Bug Bounty 프로그램 **2회** 런칭·운영 (HackerOne, HackenProof)
+      - AI Agent 기반 **3단계 Security Review 파이프라인** 구축으로 리뷰 시간 며칠 → PR 단위 압축
+      - 클라우드 네이티브(EKS/GKE) 보안 체계 직접 구축
+      - 네이버 버그바운티 XSS 제보 채택 (NBB-1405)
 
   - title: Skilled in Cybersecurity Tools and Environments
     layout: text
     content: | # this will include new lines to allow paragraphs
-      - <mark>Firefox</mark> Chrome
-      - <mark>Burpsuite</mark> <mark>OWASP ZAP</mark>
-      - <mark>Python</mark> Shell Javascript
-      - <mark>Insomnia</mark> <mark>jadx</mark> <mark>Hopper</mark>
-      - <mark>Visual Studio Code</mark> Sublime Text Xcode Android Studio
-      - <mark>Flask</mark> <mark>Git</mark> Active Directory
-      - Jira Confluence
-      - <mark>Google Cloud Platform</mark>
+      - <mark>Burp Suite Pro</mark> <mark>OWASP ZAP</mark> <mark>Frida</mark> Hopper Proxmark3
+      - <mark>Python</mark> <mark>FastAPI</mark> <mark>Claude AI Agent</mark> <mark>MCP</mark> n8n
+      - <mark>AWS (EKS, GuardDuty, Inspector)</mark> <mark>GCP (GKE, Cloud Run, BigQuery)</mark> Kubernetes Terraform
+      - <mark>CrowdStrike Falcon</mark> <mark>Datadog SIEM</mark> Splunk <mark>Cloudflare WAF</mark>
+      - <mark>Okta</mark> 1Password Active Directory
+      - <mark>ISO 27001/27701</mark> ISMS-P CIS Benchmark <mark>VARA</mark>
+      - <mark>Python</mark> Shell TypeScript JavaScript SQL Go
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        title: Prex (Flipster)
+        link: flipster.io
+        sub_title: Security Engineer, Security Team
+        caption: 2024.07 - Present
+        description: |
+            <i>Prex Technologies Pte Ltd (IC, 2026.01—Present) · 프렉스코리아 (정규직, 2024.07—2025.12) · Singapore (Remote)</i>
+            <br><i>※ 한국 법인 폐업에 따라 싱가포르 본사로 IC 계약 전환, 동일 팀·동일 업무 연속 수행</i>
+
+            암호화폐 파생상품 거래소 Flipster 서비스 보안 전반 담당. 보안 리뷰부터 SOC, 인프라, 컴플라이언스까지 end-to-end 보안 체계 구축·운영.
+
+            <b>3단계 Security Review Agent 파이프라인 구축 (AI 자동화)</b>
+            -	Code Reviewer Agent — PR 단위 정적 분석 (인증·인가·입력 검증·민감 정보 노출)
+            -	False Positive Validator Agent — 데이터 흐름·기존 보안 통제 역추적, 실제 익스플로잇 가능성 재검증
+            -	Pentest Validator Agent — staging 환경 동적 PoC로 결론 확정
+            -	며칠 단위로 걸리던 보안 리뷰를 PR 단위로 압축
+            -	Stack: Claude AI Agent, FastAPI, n8n, GitHub Actions, Python, Jira API
+
+            <b>거래소 보안 평가(CER) D → AAA 등급 견인 — 90점, 글로벌 10위</b>
+            -	User Security 기능 신규 런칭 — Anti-Phishing Code, Device Management, Withdrawal Whitelist
+            -	1년 내 D → AA(2025.05) → AAA(2025.08) 3단계 등급 견인
+            -	평가 항목별 갭 분석 → 우선순위·로드맵 수립, Wallet/Backend/OpsX 팀과 cross-functional 추진
+            -	평가 기관 Hacken과 커뮤니케이션, 리포트 검증
+
+            <b>Bug Bounty 프로그램 런칭·운영 (HackenProof)</b>
+            -	프로그램 정책 설계 — 범위, 보상 체계, Triage SLA, Disclosure Policy
+            -	Severity별 보상 체계 — Critical(CVSS 9.0–10.0) $800–$3,000 차등 보상
+            -	제보 트리아지 (재현·영향도·중복 판정), 글로벌 리서쳐 커뮤니케이션
+            -	HackenProof·Hacken 외부 제휴로 Cer.live 평가·펜테스팅 연계
+
+            <b>Security Agent Bot 개발 (MCP 기반 보안팀 운영 챗봇)</b>
+            -	Okta·AWS·GCP·Datadog·Jira를 MCP로 연결, Slack 멘션 한 번으로 로그인 이력·IAM 권한·사고 티켓 처리
+            -	안전 장치 코드 고정 — MCP 외부 호출 차단, shell/JS 실행 차단, 시크릿 마스킹, 화이트리스트
+            -	Stack: TypeScript, Node.js, MCP, Claude Code SDK, Slack Bolt, Okta/AWS/GCP/Datadog/Jira API
+
+            <b>SDLC 보안 리뷰 프로세스 정립 및 40+건 수행</b>
+            -	PRD부터 출시 전까지 보안 검토 — Copy Trading, API Trading, Wallet, MFA, Passkey, OAuth 등
+            -	Wallet Security Review 프로세스·템플릿 신규 수립 (자금 흐름·키 관리·서명 검증·출금 흐름 표준화)
+            -	리뷰 결과 Notion 동기화·Jira 연동, Overdue Alert 자동화
+            -	고위험 설계 이슈를 출시 전 차단
+
+            <b>기타 — DDoS 대응 · IR · 위협 모델링 · 컴플라이언스 · 펜테스팅 관리</b>
+            -	20+건 DDoS 공격 대응 — Cloudflare Managed/Custom Rule, JA3/JA4 fingerprint 봇 차단
+            -	Wallet Kill Chain Drill 주관 — BTC 무단 출금 시나리오 tabletop, CISO 참석 cross-functional 회고
+            -	Live IR — Malware 감염 대응 (CrowdStrike), 피싱 조사, 침입 시도 봉쇄
+            -	Secret Audit 자동화 — Risk Scoring Engine, P0(Critical) 64건 포함 총 83건 식별
+            -	외부 펜테스팅 관리 — ENKI, NCC Group, Whitehat과 웹/모바일/인프라 펜테스팅
+            -	CIS Benchmark Golden Image — Packer + Ansible Lockdown 기반 EKS 노드 하드닝
+            -	ISO 27001/27701 최초 심사·사후심사, VARA 라이선싱 후속(Post-IPA) 대응
+
+      - layout: left
         title: 스윗코리아
         link: swit.io
-        # link_text: boringcompany.com
-        sub_title: 서비스 보안 매니저
-        caption: 2022 - Present
-        description: | 
-            <b>Hackerone Bugbounty 운영</b>
+        sub_title: Security Manager
+        caption: 2022.08 - 2024.06
+        description: |
+            B2B SaaS 협업 도구 · 1인 보안팀으로 Bug Bounty부터 CI/CD 보안까지 서비스 보안 전 영역 단독 커버.
+
+            <b>Hackerone Bug Bounty 운영</b>
             -	프로그램 정책 및 범위 수립
+            -	글로벌 리서쳐와 협업해 총 301건 취약점 처리
             -	보고서 검토/취약점 재현 및 영향도 평가
-            -	취약점 조치 및 이슈 전달
             -	보상금 평가 및 수여
-            -	Jira/Swit 이슈 추적 자동화 개발
+            -	Jira/Swit/HackerOne 통합으로 이슈 생성·조치 자동화
+
+            <b>CI/CD 자동화 보안 프로세스 개발</b>
+            -	정적 소스코드 취약점 점검 (SonarQube)
+            -	동적 취약점 점검 (OWASP ZAP)
+            -	신규 API(staging, 운영) 및 신규 위협 파라미터 이벤트 시스템
+            -	GKE 이미지/런타임 취약점 점검 자동화
+            -	매월 보안 이슈 40% 감소
+
+            <b>위협 알람/액션 앱 개발</b>
+            -	Splunk + Cloud Run + Pub/Sub 기반 위협 이벤트 알람·자동 액션
+            -	IP 차단, 공격 Payload 확인, 검토 등록 등 one-click 액션
+            -	Jira와 연동된 이슈 추적 기능
 
             <b>서비스 모의해킹/취약점 점검</b>
-            - 모의해킹 방법론 및 가이드 작성
-            - 서비스 취약점 점검(Web/Mobile/Desktop)
-            - 시나리오 기반 모의침투
+            -	모의해킹 방법론 및 가이드 작성
+            -	Web/Mobile/Desktop 서비스 취약점 점검
+            -	시나리오 기반 모의침투
+            -	입사 후 전체 서비스 점검으로 61건 도출 (전년 외부 컨설팅 3건 대비)
 
             <b>보안성 검토</b>
             -	보안성 검토 지침/가이드 작성
             -	체크리스트 수립
-            -	기획/개발/QA 단계 보안성 검토
-
-            <b>위협 알람/액션 앱 개발</b>
-            -	위협 이벤트 발생 시 Swit Developers App을 통한 알람 개발
-            -	이벤트에 따른 액션 기능 개발(IP차단, 공격 Payload 확인, 검토 등록)
-            -	Jira와 연동 되어 이슈 추적 기능 개발
-            - GCP 인프라 설계
-
-            <b>CI/CD 자동화 보안 프로세스 개발</b>
-            -	정적 소스코드 취약점 점검(Sonarqube)
-            -	동적 취약점 점검(OWASP ZAP)
-            -	신규 API(staging, 운영) 및 신규 위협 파라미터(url, path 등) 이벤트 시스템
-            -	GKE 이미지/런타임 취약점 점검 자동화
+            -	기획/개발/QA 단계 보안성 검토 정착
 
       - layout: left
         title: 시큐리티허브
         link: securityhub.co.kr
-        sub_title: 보안 컨설턴트(모의해킹)
-        caption: 2019 - 2022
+        sub_title: 모의해킹 1팀 선임 컨설턴트 / Convergence TF Lead
+        caption: 2019.01 - 2022.06
         description: | # this will include new lines to allow paragraphs
-            <b>시나리오 기반 모의침투</b>
-            - 시나리오 작성
-            - 정보 수집 및 초기 침투 
-            - 내부 침투
-            - 결과 보고서 작성
-            - 자동화 도구 개발 및 적용
+            정보보호 전문서비스 · 총 15개 프로젝트에서 모의해킹·취약점 점검·IoT 보안 연구 수행.
 
-            <b>취약점 점검</b>
-            - Web/Mobile/CS/IoT/Infra 취약점 점검
-            - 결과보고서 작성
-            
+            <b>블랙박스 모의침투 (대기업 그룹사)</b>
+            -	28개 그룹사 외부→내부 네트워크 침투
+            -	APT 공격 시나리오 13개 수행 (Active Directory 연구 포함)
+            -	Domain Admin 권한 탈취 사례 다수
+            -	자체 해킹 도구 개발
 
+            <b>금융권 모의해킹</b>
+            -	은행 내부망 Endpoint 솔루션 점검
+            -	SSO 동적 디버깅으로 전체 시스템 관리자 권한 탈취
+            -	스마트뱅킹 보안성 심의
 
+            <b>대기업 서비스 모의해킹</b>
+            -	ISMS-P/ISO27001 인증 점검
+            -	자율주행, 이커머스 등 다양한 도메인
+            -	각종 SQL Injection 유형 발굴, XSS·CSRF·SSRF 시나리오 PoC 도출
+
+            <b>IoT 취약점 방법론 연구</b>
+            -	하드웨어 (UART, JTAG, Flash dump)
+            -	무선통신 (Zigbee, RF, RFID, Bluetooth, WiFi)
+            -	펌웨어 분석
+
+            <b>모바일 보안 솔루션 BMT</b>
+            -	Frida 기반 솔루션 우회
+            -	XecureWEB 암호화 우회
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
@@ -152,14 +187,14 @@ content:
         sub_title: 컴퓨터소프트웨어공학과
         description: | # this will include new
             <b>보안 동아리 창설 및 활동 - BOSS</b>
-            - Nessus를 활용한 MetasploitableV3 취약점 분석 평가 보고서
-            - 실시간 패킷 분석 시스템 개발 
-            - NSE를 이용한 스크립트 분석 보고서 작성
-            - The Lord Of Bufferoverflow 실습 보고서 작성
+            - Nessus를 활용한 MetasploitableV3 취약점 분석 평가 보고서
+            - 실시간 패킷 분석 시스템 개발
+            - NSE를 이용한 스크립트 분석 보고서 작성
+            - The Lord Of Bufferoverflow 실습 보고서 작성
             - 내부 스터디 및 연구 진행
 
             <b>자연어처리 연구실 - 연구실장</b>
-            - 문단 간 유사도와 로지스틱 회귀 분류를 통한 기사 내 부적합 문단 검출 시스템 개발 및 논문 작성
+            - 문단 간 유사도와 로지스틱 회귀 분류를 통한 기사 내 부적합 문단 검출 시스템 개발 및 논문 작성
             - 자연어 처리 연구
 
       - layout: left
@@ -168,7 +203,7 @@ content:
         sub_title: 컴퓨터과
         description: | # this will include new
             <b>기능경기부 활동</b>
-            - 웹 개발 학습(apache, mysql, php, photoshop)
+            - 웹 개발 학습 (apache, mysql, php, photoshop)
             - 부산지방기능경기대회 은메달 입상
 
       - layout: left
@@ -177,19 +212,21 @@ content:
         sub_title: 정보보호 관리진단 기술인력 양성 과정, 모의해킹, 정보보안 전문가
         description: | # this will include new
             <b>보안 교육 과정 수강</b>
-            - K-Shield Jr. 1기 
+            - K-Shield Jr. 1기
             - 보안프로젝트 모의해킹 실무자 과정
             - i2sec 정보보안전문가 과정
 
   - title: Awards & ETC
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - 네이버 버그바운티 제보 @NBB-1405-XSS
-      - 정보처리기사 취득 @한국산업인력공단
-      - 제1회 시큐리티허브 사내세미나 1위 @Docker Security
-      - 부산기능경기대회 웹 디자인 부문 은메달 @고용노동부
-      - K-Shield Jr. 11기 멘토
+      - **거래소 보안 평가(CER) AAA · 90점 · 글로벌 10위** — Flipster 등급 견인 (2025)
+      - **Bug Bounty 프로그램 2회 런칭** — HackerOne (Swit), HackenProof (Flipster)
+      - **네이버 버그바운티 제보 채택** @NBB-1405-XSS (2020.08)
+      - **K-Shield Jr. 11기 멘토** — 모의해킹 1팀·6팀 (2023)
+      - **정보처리기사** 취득 @한국산업인력공단 (2019.11)
+      - **K-Shield Jr. 1기** 수료 @한국정보보호교육센터 (2018)
+      - **제1회 시큐리티허브 사내 세미나 1위** @Docker Security (2020.04)
+      - **부산지방기능경기대회 웹 디자인 부문 은메달** @고용노동부
 
 # Footer
 footer_show_references: true
@@ -207,4 +244,3 @@ plugins:
 
 
 livereload: true
-
