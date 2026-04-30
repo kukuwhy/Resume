@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>김규완 — Security Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --line: #d4d4d4;
+    --accent: #1f2937;
+    --highlight-bg: #f5f5f5;
+  }
+
+  html, body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color: var(--ink);
+    font-size: 10.5pt;
+    line-height: 1.5;
+    background: white;
+  }
+
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.92em; }
+  .muted { color: var(--muted); }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 32px;
+  }
+
+  /* HEADER */
+  header {
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2px;
+  }
+  h1 .romanized {
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 6px;
+  }
+  .role-tagline {
+    font-size: 10pt;
+    color: var(--muted);
+  }
+
+  /* SECTION */
+  section {
+    margin-bottom: 18px;
+  }
+  h2 {
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+
+  /* SUMMARY */
+  .summary-text {
+    margin-bottom: 8px;
+  }
+  .summary-text strong {
+    font-weight: 600;
+  }
+
+  /* BULLETS */
+  ul.bullets {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul.bullets li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 3px;
+    line-height: 1.55;
+  }
+  ul.bullets li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #888;
+    font-weight: 500;
+  }
+  .highlight-num {
+    font-weight: 600;
+    color: #000;
+  }
+
+  /* COMPETENCIES */
+  .competencies > div {
+    margin-bottom: 3px;
+    line-height: 1.6;
+  }
+  .competencies strong {
+    font-weight: 600;
+  }
+
+  /* EXPERIENCE */
+  .role {
+    margin-bottom: 18px;
+  }
+  .role-header {
+    display: table;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+  .role-header h3 {
+    display: table-cell;
+    font-size: 11pt;
+    font-weight: 600;
+    text-align: left;
+  }
+  .role-header .role-meta {
+    display: table-cell;
+    text-align: right;
+    white-space: nowrap;
+    vertical-align: baseline;
+  }
+  .role-header h3 .role-title {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 10pt;
+  }
+  .role-meta {
+    font-size: 9pt;
+    color: var(--muted);
+  }
+  .role-context {
+    font-size: 9pt;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .role-note {
+    font-size: 9pt;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .role-overview {
+    margin-bottom: 10px;
+  }
+
+  /* ACHIEVEMENT */
+  .achievement {
+    margin-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .achievement-title {
+    font-size: 10.5pt;
+    font-weight: 600;
+    margin-bottom: 3px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .achievement ul.bullets {
+    break-before: avoid;
+    page-break-before: avoid;
+  }
+  .stack-box {
+    font-size: 8.5pt;
+    color: #444;
+    background: var(--highlight-bg);
+    padding: 5px 8px;
+    border-radius: 3px;
+    margin-top: 4px;
+    line-height: 1.5;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* EDUCATION GRID */
+  .two-col {
+    display: table;
+    width: 100%;
+    border-spacing: 24px 0;
+    margin-left: -24px;
+  }
+  .two-col > div {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  /* PRINT */
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+  @media print {
+    body { font-size: 10pt; }
+    .container { padding: 0; max-width: none; }
+    h2 {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .role-header {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .achievement {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .achievement-title {
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+    .stack-box {
+      break-before: avoid;
+      page-break-before: avoid;
+    }
+    ul.bullets {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    ul.bullets li {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<header>
+  <h1>김규완<span class="romanized">Kyuwan Kim</span></h1>
+  <p class="role-tagline">Security Engineer · 8+ years</p>
+</header>
+
+<!-- SUMMARY -->
+<section>
+  <h2>Summary</h2>
+  <p class="summary-text">
+    공격자 관점의 모의해킹에서 출발해 <strong>제품 보안</strong>과 <strong>보안 자동화</strong>로 전환한 8년차 Security Engineer입니다.
+    AI Agent로 보안 리뷰·펜테스트 워크플로우를 통합해 며칠 단위로 걸리던 리뷰를 PR 단위로 압축했고,
+    위협 모델링·Bug Bounty 프로그램 설계·Shift Left SDLC 리뷰로 <strong>설계 단계에서 위협을 줄이는 일</strong>에 집중합니다.
+  </p>
+  <ul class="bullets">
+    <li>SDLC 보안 리뷰 <span class="highlight-num">40+건</span> 직접 수행, 고위험 설계 이슈를 출시 전 차단</li>
+    <li>User Security 기능 신규 런칭으로 거래소 보안 평가(CER) <span class="highlight-num">D → AAA</span> 견인 (90점, 글로벌 10위)</li>
+    <li>Bug Bounty 프로그램 <span class="highlight-num">2회</span> 런칭·운영 (HackerOne, HackenProof)</li>
+    <li>AI Agent 기반 <strong>3단계 Security Review 파이프라인</strong> 구축으로 리뷰 시간 며칠 → PR 단위로 압축</li>
+    <li>클라우드 네이티브(EKS/GKE) 보안 체계 직접 구축</li>
+  </ul>
+</section>
+
+<!-- CORE COMPETENCIES -->
+<section>
+  <h2>Core Competencies</h2>
+  <div class="competencies">
+    <div><strong>Offensive</strong> · Burp Suite Pro · OWASP ZAP · Frida · Hopper · Proxmark3</div>
+    <div><strong>Automation</strong> · Python · FastAPI · Claude AI Agent · MCP · n8n · GitHub Actions · SonarQube · Trivy</div>
+    <div><strong>Cloud</strong> · AWS (EKS, GuardDuty, Inspector, CloudTrail) · GCP (GKE, Cloud Run, BigQuery) · Kubernetes · Terraform</div>
+    <div><strong>SecOps</strong> · CrowdStrike Falcon (MDR, CSPM, Container) · Datadog SIEM · Splunk · Cloudflare WAF</div>
+    <div><strong>IAM</strong> · Okta · 1Password · Active Directory</div>
+    <div><strong>Compliance</strong> · ISO 27001 · ISO 27701 · ISMS-P · CIS Benchmark · VARA</div>
+    <div><strong>Languages</strong> · Python · Shell · TypeScript · JavaScript · SQL · Go</div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>Experience</h2>
+
+  <!-- PREX -->
+  <div class="role">
+    <div class="role-header">
+      <h3>Prex (Flipster) <span class="role-title">— Security Engineer, Security Team</span></h3>
+      <span class="role-meta mono">2024.07 — Present</span>
+    </div>
+    <p class="role-context">
+      Prex Technologies Pte Ltd (IC, 2026.01—Present) · 프렉스코리아 (정규직, 2024.07—2025.12) · Singapore (Remote)
+    </p>
+    <p class="role-note">한국 법인 폐업에 따라 싱가포르 본사로 IC 계약 전환, 동일 팀·동일 업무 연속 수행.</p>
+    <p class="role-overview">
+      암호화폐 파생상품 거래소 Flipster 서비스 보안 전반 담당. 보안 리뷰부터 SOC, 인프라, 컴플라이언스까지 end-to-end 보안 체계 구축·운영.
+    </p>
+
+    <!-- Achievement 1 -->
+    <div class="achievement">
+      <p class="achievement-title">3단계 Security Review Agent 파이프라인 구축 (AI 자동화)</p>
+      <ul class="bullets">
+        <li><strong>Code Reviewer Agent</strong> — PR 단위 정적 분석 (인증·인가·입력 검증·민감 정보 노출)</li>
+        <li><strong>False Positive Validator Agent</strong> — 데이터 흐름·기존 보안 통제 역추적, 실제 익스플로잇 가능성 재검증</li>
+        <li><strong>Pentest Validator Agent</strong> — staging 환경 동적 PoC로 결론 확정</li>
+        <li>며칠 단위로 걸리던 보안 리뷰를 <span class="highlight-num">PR 단위로 압축</span>, 보안팀이 비즈니스 로직 결함·권한 설계에 집중할 시간 확보</li>
+      </ul>
+      <div class="stack-box">Stack · Claude AI Agent · FastAPI · n8n · GitHub Actions · Python · Jira API</div>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="achievement">
+      <p class="achievement-title">거래소 보안 평가(CER) D → AAA 등급 견인 — <span class="highlight-num">90점 · 글로벌 10위</span></p>
+      <ul class="bullets">
+        <li>User Security 기능 신규 런칭 — Anti-Phishing Code · Device Management · Withdrawal Whitelist</li>
+        <li>1년 내 <span class="highlight-num">D → AA(2025.05) → AAA(2025.08)</span> 3단계 등급 견인</li>
+        <li>평가 항목별 갭 분석 → 우선순위·로드맵 수립, Wallet · Backend · OpsX 팀과 cross-functional 추진</li>
+        <li>평가 기관 Hacken과 커뮤니케이션, 리포트 검증</li>
+      </ul>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="achievement">
+      <p class="achievement-title">Bug Bounty 프로그램 런칭·운영 (HackenProof)</p>
+      <ul class="bullets">
+        <li>프로그램 정책 설계 — 범위 · 보상 체계 · Triage SLA · Disclosure Policy</li>
+        <li>Severity별 보상 체계 — Critical(CVSS 9.0–10.0) $800–$3,000 차등 보상</li>
+        <li>제보 트리아지(재현·영향도·중복 판정), 글로벌 리서쳐 커뮤니케이션</li>
+        <li>HackenProof · Hacken 외부 제휴로 Cer.live 평가·펜테스팅 연계</li>
+      </ul>
+    </div>
+
+    <!-- Achievement 4 -->
+    <div class="achievement">
+      <p class="achievement-title">Security Agent Bot 개발 (MCP 기반 보안팀 운영 챗봇)</p>
+      <ul class="bullets">
+        <li>Okta · AWS · GCP · Datadog · Jira를 MCP로 연결, Slack 멘션 한 번으로 로그인 이력·IAM 권한·사고 티켓 처리</li>
+        <li><strong>안전 장치 코드 고정</strong> — MCP 외부 호출 차단, shell/JS 실행 차단, 시크릿 마스킹, 채널·DM·팀 ID 화이트리스트</li>
+        <li>"Agent 자체가 새로운 공격 표면이 되는 것"을 가정하고 설계 → 보안팀이 직접 신뢰·사용 가능한 도구</li>
+      </ul>
+      <div class="stack-box">Stack · TypeScript · Node.js · MCP · Claude Code SDK · Slack Bolt · Okta · AWS · GCP · Datadog · Jira</div>
+    </div>
+
+    <!-- Achievement 5 -->
+    <div class="achievement">
+      <p class="achievement-title">SDLC 보안 리뷰 프로세스 정립 및 <span class="highlight-num">40+건</span> 수행</p>
+      <ul class="bullets">
+        <li>PRD부터 출시 전까지 보안 검토 — Copy Trading, API Trading, Wallet, MFA, Passkey, OAuth 등</li>
+        <li>Wallet Security Review 프로세스·템플릿 신규 수립 (자금 흐름·키 관리·서명 검증·출금 흐름 표준화)</li>
+        <li>리뷰 결과 Notion 동기화·Jira 연동, Overdue Alert 자동화</li>
+        <li>고위험 설계 이슈를 출시 전 차단</li>
+      </ul>
+    </div>
+
+    <!-- Achievement 6 (ETC) -->
+    <div class="achievement">
+      <p class="achievement-title">기타 — DDoS 대응 · IR · Threat Modeling · Compliance · Pentest 관리</p>
+      <ul class="bullets">
+        <li><strong>20+건 DDoS 대응</strong> — Cloudflare Managed/Custom Rule, Rate Limit, JA3/JA4 fingerprint 봇 차단, Attack Score ML</li>
+        <li><strong>Wallet Kill Chain Drill 주관</strong> — BTC 무단 출금 시나리오 tabletop, CISO 참석 cross-functional 회고</li>
+        <li><strong>Live IR</strong> — Malware 감염 대응 (CrowdStrike), 피싱 조사, 침입 시도 봉쇄</li>
+        <li><strong>Secret Audit 자동화</strong> — Risk Scoring Engine, P0(Critical) <span class="highlight-num">64건</span> 포함 총 83건 식별 (수 주 → 수 시간 1회 분석)</li>
+        <li><strong>외부 펜테스팅 관리</strong> — ENKI · NCC Group · Whitehat 웹·모바일·인프라 펜테스팅, SRM 추적·remediation</li>
+        <li><strong>CIS Benchmark Golden Image</strong> — Packer + Ansible Lockdown 기반 Ubuntu/Debian/Amazon Linux 하드닝, EKS 노드</li>
+        <li><strong>Threat Modeling</strong> — 자금 유출(Fund Loss), PII 데이터 DFD 위협 모델링</li>
+        <li><strong>Compliance</strong> — ISO 27001/27701 최초 심사·사후심사, VARA 라이선싱 후속(Post-IPA) 대응</li>
+        <li><strong>연간 보안 교육</strong> — EN/KR 세션 운영, Employee Security Handbook 작성</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SWIT -->
+  <div class="role">
+    <div class="role-header">
+      <h3>Swit (스윗코리아) <span class="role-title">— Security Manager</span></h3>
+      <span class="role-meta mono">2022.08 — 2024.06</span>
+    </div>
+    <p class="role-context">B2B SaaS 협업 도구 · 1인 보안팀</p>
+    <p class="role-overview">서비스 보안 담당자로 보안 체계 구축·운영. Bug Bounty부터 CI/CD 보안까지 전 영역 단독 커버.</p>
+    <ul class="bullets">
+      <li><strong>HackerOne Bug Bounty 운영</strong> — 정책·범위·보상 수립, 글로벌 리서쳐와 협업해 <span class="highlight-num">301건</span> 처리, Jira 자동 연동</li>
+      <li><strong>CI/CD 보안 자동화</strong> — GitHub Actions·Cloud Build에 SonarQube + OWASP ZAP, 신규 API·위협 파라미터 탐지, GKE 이미지·런타임 취약점 점검 통합. 매월 보안 이슈 <span class="highlight-num">40% 감소</span></li>
+      <li><strong>위협 알람·액션 앱 개발</strong> — Splunk + Cloud Run + Pub/Sub 기반 위협 이벤트 알람·자동 액션 (IP 차단, Payload 확인), Jira 연동</li>
+      <li><strong>서비스 모의해킹 + 보안성 검토 프로세스</strong> — 입사 후 전체 서비스 점검으로 <span class="highlight-num">61건</span> 도출 (전년 외부 컨설팅 3건 대비), 기획·개발·QA 단계 리뷰 정착</li>
+    </ul>
+    <div class="stack-box">Stack · Python · SonarQube · OWASP ZAP · GitHub Actions · GCP (GKE, Cloud Run, Pub/Sub) · Splunk · HackerOne</div>
+  </div>
+
+  <!-- SECURITYHUB -->
+  <div class="role">
+    <div class="role-header">
+      <h3>시큐리티허브 <span class="role-title">— 모의해킹 1팀 선임 컨설턴트 / Convergence TF Lead</span></h3>
+      <span class="role-meta mono">2019.01 — 2022.06</span>
+    </div>
+    <p class="role-context">정보보호 전문서비스 · 총 15개 프로젝트</p>
+    <ul class="bullets">
+      <li><strong>블랙박스 모의침투 (대기업 그룹사)</strong> — <span class="highlight-num">28개 그룹사</span> 외부→내부 침투, APT 시나리오 13개 수행 (AD 연구), Domain Admin 권한 탈취 다수, 자체 해킹 도구 개발</li>
+      <li><strong>금융권 모의해킹</strong> — 은행 내부망 Endpoint 솔루션, SSO 동적 디버깅으로 전체 시스템 관리자 권한 탈취, 스마트뱅킹 보안성 심의</li>
+      <li><strong>대기업 서비스 모의해킹</strong> — ISMS-P/ISO27001 인증 점검, 자율주행·이커머스 등 다양한 도메인. SQL Injection 유형 발굴, XSS·CSRF·SSRF 시나리오 PoC 도출</li>
+      <li><strong>IoT 취약점 방법론 연구</strong> — 하드웨어(UART · JTAG · Flash dump) + 무선통신(Zigbee · RF · RFID · BT · WiFi) + 펌웨어 분석</li>
+      <li><strong>모바일 보안 솔루션 BMT</strong> — Frida 기반 솔루션 우회, XecureWEB 암호화 우회</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+  <h2>Selected Achievements</h2>
+  <ul class="bullets">
+    <li><strong>NBB-1405</strong> — 네이버 버그바운티 XSS 제보 채택 (2020.08)</li>
+    <li><strong>거래소 보안 평가(CER) AAA · 90점 · 글로벌 10위</strong> — Flipster 등급 견인 (2025)</li>
+    <li><strong>Bug Bounty 프로그램 2회 런칭</strong> — HackerOne (Swit), HackenProof (Flipster)</li>
+    <li><strong>K-Shield Jr. 11기 멘토링</strong> — 모의해킹 1팀·6팀 (2023.09)</li>
+  </ul>
+</section>
+
+<!-- EDUCATION + CERT -->
+<section class="two-col">
+  <div>
+    <h2>Education</h2>
+    <p style="font-weight: 600;">국립금오공과대학교</p>
+    <p class="role-meta">소프트웨어 공학 학사 · 2012.03 — 2019.08 (군 복무 포함)</p>
+  </div>
+  <div>
+    <h2>Certifications</h2>
+    <ul class="bullets">
+      <li><strong>정보처리기사</strong> — 한국산업인력공단 (2019.11)</li>
+      <li><strong>K-Shield Jr. 1기 수료</strong> — 한국정보보호교육센터 (2018)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- LINKS -->
+<section>
+  <h2>Links</h2>
+  <p>Blog · <span class="mono">kukuwhy.github.io</span></p>
+  <p>GitHub · <span class="mono">github.com/kukuwhy</span></p>
+</section>
+
+</div>
+</body>
+</html>
