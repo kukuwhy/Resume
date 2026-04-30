@@ -44,6 +44,14 @@
     letter-spacing: -0.02em;
     margin-bottom: 2px;
   }
+  h1 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  h1 a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
   h1 .romanized {
     font-size: 11pt;
     font-weight: 400;
@@ -60,7 +68,7 @@
     margin-bottom: 18px;
   }
   h2 {
-    font-size: 8.5pt;
+    font-size: 9.5pt;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--accent);
@@ -175,11 +183,12 @@
   }
   .stack-box {
     font-size: 8.5pt;
-    color: #444;
-    background: var(--highlight-bg);
-    padding: 5px 8px;
+    color: #333;
+    background: #ececec;
+    border-left: 3px solid #999;
+    padding: 6px 10px;
     border-radius: 3px;
-    margin-top: 4px;
+    margin-top: 6px;
     line-height: 1.5;
     font-family: 'JetBrains Mono', monospace;
   }
@@ -241,7 +250,7 @@
 
 <!-- HEADER -->
 <header>
-  <h1>김규완<span class="romanized">Kyuwan Kim</span></h1>
+  <h1><a href="https://github.com/kukuwhy/Resume">김규완</a><span class="romanized">Kyuwan Kim</span></h1>
   <p class="role-tagline">Security Engineer · 8+ years</p>
 </header>
 
@@ -266,7 +275,7 @@
 <section>
   <h2>Core Competencies</h2>
   <div class="competencies">
-    <div><strong>Offensive</strong> · Burp Suite Pro · OWASP ZAP · Frida · Hopper · Proxmark3</div>
+    <div><strong>Offensive</strong> · Burp Suite Pro · OWASP ZAP · Frida · Hopper</div>
     <div><strong>Automation</strong> · Python · FastAPI · Claude AI Agent · MCP · n8n · GitHub Actions · SonarQube · Trivy</div>
     <div><strong>Cloud</strong> · AWS (EKS, GuardDuty, Inspector, CloudTrail) · GCP (GKE, Cloud Run, BigQuery) · Kubernetes · Terraform</div>
     <div><strong>SecOps</strong> · CrowdStrike Falcon (MDR, CSPM, Container) · Datadog SIEM · Splunk · Cloudflare WAF</div>
@@ -352,13 +361,14 @@
 
     <!-- Achievement 6 (ETC) -->
     <div class="achievement">
-      <p class="achievement-title">기타 — DDoS 대응 · IR · Threat Modeling · Compliance · Pentest 관리</p>
+      <p class="achievement-title">기타 — On-Call · DDoS 대응 · IR · Threat Modeling · Compliance</p>
       <ul class="bullets">
+        <li><strong>Security On-Call Duty</strong> — Security 엔지니어 주간 로테이션으로 24/7 보안 이벤트 모니터링·대응. Cloudflare/SIEM/CrowdStrike 알람 분석, security-request 채널 응대, 탐지 룰 튜닝, SIEM·SOAR 운영</li>
         <li><strong>20+건 DDoS 대응</strong> — Cloudflare Managed/Custom Rule, Rate Limit, JA3/JA4 fingerprint 봇 차단, Attack Score ML</li>
         <li><strong>Wallet Kill Chain Drill 주관</strong> — BTC 무단 출금 시나리오 tabletop, CISO 참석 cross-functional 회고</li>
         <li><strong>Live IR</strong> — Malware 감염 대응 (CrowdStrike), 피싱 조사, 침입 시도 봉쇄</li>
         <li><strong>Secret Audit 자동화</strong> — Risk Scoring Engine, P0(Critical) <span class="highlight-num">64건</span> 포함 총 83건 식별 (수 주 → 수 시간 1회 분석)</li>
-        <li><strong>외부 펜테스팅 관리</strong> — ENKI · NCC Group · Whitehat 웹·모바일·인프라 펜테스팅, SRM 추적·remediation</li>
+        <li><strong>외부 침투 테스트 프로젝트 관리</strong> — 다수 외부 보안 업체와 협업해 웹·모바일·인프라 펜테스팅 진행, 발견 이슈 추적 및 remediation 관리</li>
         <li><strong>CIS Benchmark Golden Image</strong> — Packer + Ansible Lockdown 기반 Ubuntu/Debian/Amazon Linux 하드닝, EKS 노드</li>
         <li><strong>Threat Modeling</strong> — 자금 유출(Fund Loss), PII 데이터 DFD 위협 모델링</li>
         <li><strong>Compliance</strong> — ISO 27001/27701 최초 심사·사후심사, VARA 라이선싱 후속(Post-IPA) 대응</li>
@@ -373,8 +383,8 @@
       <h3>Swit (스윗코리아) <span class="role-title">— Security Manager</span></h3>
       <span class="role-meta mono">2022.08 — 2024.06</span>
     </div>
-    <p class="role-context">B2B SaaS 협업 도구 · 1인 보안팀</p>
-    <p class="role-overview">서비스 보안 담당자로 보안 체계 구축·운영. Bug Bounty부터 CI/CD 보안까지 전 영역 단독 커버.</p>
+    <p class="role-context">B2B SaaS 협업 도구 · 서비스 보안 담당</p>
+    <p class="role-overview">서비스 보안 담당자로 Bug Bounty 운영·CI/CD 보안 자동화·서비스 모의해킹 등 제품 보안 영역 책임.</p>
     <ul class="bullets">
       <li><strong>HackerOne Bug Bounty 운영</strong> — 정책·범위·보상 수립, 글로벌 리서쳐와 협업해 <span class="highlight-num">301건</span> 처리, Jira 자동 연동</li>
       <li><strong>CI/CD 보안 자동화</strong> — GitHub Actions·Cloud Build에 SonarQube + OWASP ZAP, 신규 API·위협 파라미터 탐지, GKE 이미지·런타임 취약점 점검 통합. 매월 보안 이슈 <span class="highlight-num">40% 감소</span></li>
