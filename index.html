@@ -269,16 +269,14 @@
 <section>
   <h2>Summary</h2>
   <p class="summary-text">
-    공격자 관점의 모의해킹에서 출발해 <strong>제품 보안</strong>과 <strong>보안 자동화</strong>로 전환한 8년차 Security Engineer입니다.
-    AI Agent로 보안 리뷰·펜테스트 워크플로우를 통합해 리뷰 소요 시간을 며칠 → PR 단위로 단축했고,
-    위협 모델링·Bug Bounty 프로그램 설계·Shift Left SDLC 리뷰로 <strong>설계 단계에서 위협을 줄이는 일</strong>에 집중합니다.
+    8년차 Security Engineer. 모의해킹 컨설팅에서 출발해 현재는 <strong>제품 보안</strong>과 <strong>보안 자동화</strong>에 집중합니다.
+    AI Agent로 보안 리뷰·펜테스트 워크플로우를 통합하고, 거래소 도메인의 위협 모델링·Bug Bounty 프로그램 설계로
+    <strong>설계 단계 위협 제거</strong>에 집중합니다.
   </p>
   <ul class="bullets">
-    <li>SDLC 보안 리뷰 <span class="highlight-num">40+건</span> 직접 수행, 고위험 설계 이슈를 출시 전 차단</li>
-    <li>거래소 보안 평가(CER) <span class="highlight-num">D → AAA</span> 견인 (90점, 글로벌 10위) — Server·User Security 보강, Bug Bounty 런칭, 외부 펜테스팅 등 보안 엔지니어 영역 주도</li>
-    <li>Bug Bounty 프로그램 <span class="highlight-num">2회</span> 런칭·운영 (HackerOne, HackenProof)</li>
-    <li>AI Agent 기반 <strong>3단계 Security Review 파이프라인</strong> 구축으로 리뷰 시간 며칠 → PR 단위 단축</li>
-    <li>클라우드 네이티브(EKS/GKE) 보안 체계 직접 구축</li>
+    <li>거래소 보안 평가(CER) <span class="highlight-num">D → AAA</span> 견인 — 90점, 글로벌 10위</li>
+    <li>AI Agent 기반 <strong>3단계 Security Review 파이프라인</strong> 구축 — 리뷰 시간 며칠 → PR 단위 단축</li>
+    <li>Bug Bounty 프로그램 <span class="highlight-num">2회</span> 런칭·운영 (HackerOne, HackenProof) + SDLC 보안 리뷰 <span class="highlight-num">40+건</span> 수행</li>
   </ul>
 </section>
 
@@ -330,12 +328,9 @@
     <div class="achievement">
       <p class="achievement-title">거래소 보안 평가(<a href="https://cer.live/exchange/flipster" class="external-link">CER.live</a>) D → AAA 등급 견인 — <span class="highlight-num">90점 · 글로벌 10위</span></p>
       <ul class="bullets">
-        <li>1년 내 <span class="highlight-num">D → AA(2025.05) → AAA(2025.08)</span> 3단계 등급 견인. 6개 평가 영역(Server Security, User Security, ISO 27001, Insurance, Bug Bounty, Penetration Test) 갭 분석 → 우선순위·로드맵 수립</li>
-        <li><strong>Server Security</strong> — SSL/TLS·HTTP Headers·SPF/DNSSEC·Cookie Flags·WAF/CDN 항목 점검 및 보강</li>
-        <li><strong>User Security</strong> — Anti-Phishing Code · Device Management · Withdrawal Whitelist 신규 런칭</li>
-        <li><strong>Bug Bounty (HackenProof)</strong> · <strong>Penetration Test</strong> — 프로그램 런칭·외부 펜테스팅(Web·iOS·Android 전체 스코프) 운영으로 만점 획득</li>
-        <li><strong>ISO 27001 / Insurance Fund</strong> — 거버넌스 팀 주도, 보안 엔지니어 관점에서 협업 대응</li>
-        <li>유관 팀(Wallet · Backend · OpsX) cross-functional 추진, 평가 기관 Hacken과 커뮤니케이션·리포트 검증</li>
+        <li>가상자산 거래소 보안 평가 플랫폼에서 1년 내 <span class="highlight-num">D → AA(2025.05) → AAA(2025.08)</span> 3단계 등급 견인 — 6개 평가 영역 갭 분석 후 우선순위·로드맵 수립</li>
+        <li><strong>Server Security</strong> 보강 (SSL/TLS, WAF, HTTP Headers 등), <strong>User Security</strong> 신규 기능 런칭 (Anti-Phishing Code, Device Management, Withdrawal Whitelist)</li>
+        <li><strong>Bug Bounty(HackenProof) 런칭</strong> + 외부 펜테스팅(Web·iOS·Android) 운영으로 관련 영역 만점 획득</li>
       </ul>
     </div>
 
@@ -365,26 +360,43 @@
     <div class="achievement">
       <p class="achievement-title">SDLC 보안 리뷰 프로세스 정립 및 <span class="highlight-num">40+건</span> 수행</p>
       <ul class="bullets">
-        <li>PRD부터 출시 전까지 보안 검토 — Copy Trading, API Trading, Wallet, MFA, Passkey, OAuth 등</li>
-        <li>Wallet Security Review 프로세스·템플릿 신규 수립 (자금 흐름·키 관리·서명 검증·출금 흐름 표준화)</li>
-        <li>리뷰 결과 Notion 동기화·Jira 연동, Overdue Alert 자동화</li>
-        <li>고위험 설계 이슈를 출시 전 차단</li>
+        <li>PRD 단계부터 출시 전까지 보안 검토 — Copy Trading, API Trading, Wallet, MFA, Passkey, OAuth 등 신규 피처 전반</li>
+        <li>Wallet Security Review 프로세스·템플릿 신규 수립 — 자금 흐름, 키 관리, 서명 검증, 출금 흐름 등 거래소 도메인 검토 항목 표준화</li>
+        <li>MFA 정책 설계 — 출금·인증 정보 변경 등 민감 액션별 차등 MFA 적용, 사용자가 등록한 MFA 팩터에 따른 인증 흐름 정의 (개발 스쿼드 협업)</li>
+        <li>리뷰 결과 자동화 — Slack → Jira → Notion 파이프라인, Overdue Alert</li>
+        <li>출시 전 고위험 설계 이슈 차단</li>
       </ul>
     </div>
 
     <!-- Achievement 6 (ETC) -->
     <div class="achievement">
-      <p class="achievement-title">기타 — On-Call · DDoS 대응 · IR · Threat Modeling · Compliance</p>
+      <p class="achievement-title">기타 — IAM · 자동화 · Incident Response · Threat Modeling · Compliance</p>
+      <p class="role-context" style="margin-top: 4px; margin-bottom: 4px;"><strong>IAM &amp; 인프라 보안</strong></p>
       <ul class="bullets">
-        <li><strong>Security On-Call Duty</strong> — Security 엔지니어 주간 로테이션으로 24/7 보안 이벤트 모니터링·대응. Cloudflare/SIEM/CrowdStrike 알람 분석, security-request 채널 응대, 탐지 룰 튜닝, SIEM·SOAR 운영</li>
-        <li><strong>20+건 DDoS 대응</strong> — Cloudflare Managed/Custom Rule, Rate Limit, JA3/JA4 fingerprint 봇 차단, Attack Score ML</li>
-        <li><strong>Wallet Kill Chain Drill 주관</strong> — BTC 무단 출금 시나리오 tabletop, CISO 참석 cross-functional 회고</li>
-        <li><strong>Live IR</strong> — Malware 감염 대응 (CrowdStrike), 피싱 조사, 침입 시도 봉쇄</li>
-        <li><strong>Secret Audit 자동화</strong> — Risk Scoring Engine, P0(Critical) <span class="highlight-num">64건</span> 포함 총 83건 식별 (수 주 → 수 시간 1회 분석)</li>
-        <li><strong>외부 침투 테스트 프로젝트 관리</strong> — 다수 외부 보안 업체와 협업해 웹·모바일·인프라 펜테스팅 진행, 발견 이슈 추적 및 remediation 관리</li>
-        <li><strong>CIS Benchmark Golden Image</strong> — Packer + Ansible Lockdown 기반 Ubuntu/Debian/Amazon Linux 하드닝, EKS 노드</li>
-        <li><strong>Threat Modeling</strong> — 자금 유출(Fund Loss), PII 데이터 DFD 위협 모델링</li>
-        <li><strong>Compliance 협업 대응</strong> — ISO 27001/27701 심사 및 VARA 라이선싱 후속(Post-IPA) 대응 시 거버넌스 팀과 협업해 보안 엔지니어 관점 항목 대응</li>
+        <li><strong>Backoffice IAM Role 설계</strong> — 권한 모델 재정비, role 분리·정리 (보안팀 협업)</li>
+        <li><strong>Cloudflare 보안 룰 Terraform IaC 관리</strong> — 변경 이력·코드 리뷰 도입 (DevOps 협업)</li>
+        <li><strong>Google Workspace DLP 모니터링 및 정책 설계</strong> — 외부 공유·미관리 디바이스 탐지</li>
+      </ul>
+      <p class="role-context" style="margin-top: 6px; margin-bottom: 4px;"><strong>자동화</strong></p>
+      <ul class="bullets">
+        <li><strong>Account Audit 자동화</strong> — <span class="highlight-num">10+ SaaS</span> 통합 감사 시스템 구축, 미사용 계정·퇴사자 잔여 계정 자동 탐지·비활성화, 월 단위 정기 감사 운영</li>
+        <li><strong>Secret Audit 자동화</strong> — Risk Scoring Engine 구축, P0(Critical) <span class="highlight-num">64건</span> 포함 총 83건 식별 (수 주 → 수 시간 1회 분석)</li>
+        <li><strong>API Key Rotation 정책 수립</strong> — 만료·미사용 API 키 식별 기준 정의, 정기 로테이션 절차 정립</li>
+        <li><strong>외부 침투 테스트 프로젝트 관리</strong> — 다수 외부 보안 업체와 협업해 웹·모바일·인프라 펜테스팅 진행, 이슈 추적·remediation 관리</li>
+        <li><strong>CIS Benchmark Golden Image</strong> — Packer + Ansible Lockdown 기반 Ubuntu/Debian/Amazon Linux 하드닝, EKS 노드 적용</li>
+        <li><strong>거버넌스 팀 자동화 교육·멘토링</strong> — n8n, Notion AI Agent, Claude Code 활용법 전파 후 컴플라이언스 업무 자동화 1:1 멘토링, 비-엔지니어 팀의 자체 자동화 역량 확보</li>
+      </ul>
+      <p class="role-context" style="margin-top: 6px; margin-bottom: 4px;"><strong>Incident Response</strong></p>
+      <ul class="bullets">
+        <li><strong>20+건 DDoS 대응</strong> — Cloudflare Managed/Custom Rule, Rate Limit, JA3/JA4 fingerprint 기반 봇 차단, ML 기반 위협 점수 도입</li>
+        <li><strong>Wallet Kill Chain Drill 오너십</strong> — 출금 사고 시나리오 tabletop, CISO 참석 cross-functional 회고</li>
+        <li><strong>Live Incident Response</strong> — Malware 감염 대응 (CrowdStrike), 피싱 조사, 침입 시도 봉쇄</li>
+        <li><strong>Security On-Call Duty</strong> — 주간 로테이션 24/7 SIEM/Cloudflare/CrowdStrike 모니터링·대응, 탐지 룰 튜닝</li>
+      </ul>
+      <p class="role-context" style="margin-top: 6px; margin-bottom: 4px;"><strong>Threat Modeling &amp; Compliance</strong></p>
+      <ul class="bullets">
+        <li><strong>Threat Modeling</strong> — 자금 유출(Fund Loss) 위협 모델링, Insider Threat Modeling (보안팀 협업)</li>
+        <li><strong>Compliance 협업 대응</strong> — ISO 27001/27701 심사 및 VARA(아랍에미리트 가상자산 규제) 라이선스 후속 단계 대응 시 보안 엔지니어 관점 항목 대응</li>
       </ul>
     </div>
   </div>
@@ -414,11 +426,9 @@
     </div>
     <p class="role-context">정보보호 전문서비스 · 총 15개 프로젝트</p>
     <ul class="bullets">
-      <li><strong>블랙박스 모의침투 (대기업 그룹사)</strong> — <span class="highlight-num">28개 그룹사</span> 외부→내부 침투, APT 시나리오 13개 수행 (AD 연구), Domain Admin 권한 탈취 다수, 자체 해킹 도구 개발</li>
-      <li><strong>금융권 모의해킹</strong> — 은행 내부망 Endpoint 솔루션, SSO 동적 디버깅으로 전체 시스템 관리자 권한 탈취, 스마트뱅킹 보안성 심의</li>
-      <li><strong>대기업 서비스 모의해킹</strong> — ISMS-P/ISO27001 인증 점검, 자율주행·이커머스 등 다양한 도메인. SQL Injection 유형 발굴, XSS·CSRF·SSRF 시나리오 PoC 도출</li>
-      <li><strong>IoT 취약점 방법론 연구</strong> — 하드웨어(UART · JTAG · Flash dump) + 무선통신(Zigbee · RF · RFID · BT · WiFi) + 펌웨어 분석</li>
-      <li><strong>모바일 보안 솔루션 BMT</strong> — Frida 기반 솔루션 우회, XecureWEB 암호화 우회</li>
+      <li><strong>대기업 그룹사 블랙박스 모의침투</strong> — <span class="highlight-num">28개 그룹사</span> 외부→내부 침투, APT 시나리오 13개, Active Directory 연구 기반 Domain Admin 권한 탈취 다수</li>
+      <li><strong>금융권 모의해킹</strong> — 은행 내부망 솔루션 점검, SSO 동적 디버깅으로 전체 시스템 관리자 권한 탈취 사례, 스마트뱅킹 보안성 심의</li>
+      <li><strong>IoT 취약점 방법론 연구</strong> — 하드웨어(UART/JTAG/Flash dump), 무선통신(Zigbee/RF/RFID/BT/WiFi), 펌웨어 분석. Frida 기반 모바일 보안 솔루션 우회 PoC</li>
     </ul>
   </div>
 </section>
