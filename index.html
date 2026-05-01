@@ -193,6 +193,17 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
+  /* Links — clickable in PDF */
+  a.external-link, .links-section a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: #aaa;
+    text-underline-offset: 2px;
+  }
+  a.external-link:hover, .links-section a:hover {
+    text-decoration-color: var(--ink);
+  }
+
   /* EDUCATION GRID */
   .two-col {
     display: table;
@@ -250,7 +261,7 @@
 
 <!-- HEADER -->
 <header>
-  <h1><a href="https://github.com/kukuwhy/Resume">김규완</a><span class="romanized">Kyuwan Kim</span></h1>
+  <h1><a href="https://kukuwhy.github.io/Resume/">김규완</a><span class="romanized">Kyuwan Kim</span></h1>
   <p class="role-tagline">Security Engineer · 8+ years</p>
 </header>
 
@@ -259,14 +270,14 @@
   <h2>Summary</h2>
   <p class="summary-text">
     공격자 관점의 모의해킹에서 출발해 <strong>제품 보안</strong>과 <strong>보안 자동화</strong>로 전환한 8년차 Security Engineer입니다.
-    AI Agent로 보안 리뷰·펜테스트 워크플로우를 통합해 며칠 단위로 걸리던 리뷰를 PR 단위로 압축했고,
+    AI Agent로 보안 리뷰·펜테스트 워크플로우를 통합해 리뷰 소요 시간을 며칠 → PR 단위로 단축했고,
     위협 모델링·Bug Bounty 프로그램 설계·Shift Left SDLC 리뷰로 <strong>설계 단계에서 위협을 줄이는 일</strong>에 집중합니다.
   </p>
   <ul class="bullets">
     <li>SDLC 보안 리뷰 <span class="highlight-num">40+건</span> 직접 수행, 고위험 설계 이슈를 출시 전 차단</li>
     <li>User Security 기능 신규 런칭으로 거래소 보안 평가(CER) <span class="highlight-num">D → AAA</span> 견인 (90점, 글로벌 10위)</li>
     <li>Bug Bounty 프로그램 <span class="highlight-num">2회</span> 런칭·운영 (HackerOne, HackenProof)</li>
-    <li>AI Agent 기반 <strong>3단계 Security Review 파이프라인</strong> 구축으로 리뷰 시간 며칠 → PR 단위로 압축</li>
+    <li>AI Agent 기반 <strong>3단계 Security Review 파이프라인</strong> 구축으로 리뷰 시간 며칠 → PR 단위 단축</li>
     <li>클라우드 네이티브(EKS/GKE) 보안 체계 직접 구축</li>
   </ul>
 </section>
@@ -296,7 +307,7 @@
       <span class="role-meta mono">2024.07 — Present</span>
     </div>
     <p class="role-context">
-      Prex Technologies Pte Ltd (IC, 2026.01—Present) · 프렉스코리아 (정규직, 2024.07—2025.12) · Singapore (Remote)
+      Prex Technologies Pte Ltd (IC, 2026.01—Present) · 프렉스코리아 (정규직, 2024.07—2025.12.31) · Singapore (Remote)
     </p>
     <p class="role-note">한국 법인 폐업에 따라 싱가포르 본사로 IC 계약 전환, 동일 팀·동일 업무 연속 수행.</p>
     <p class="role-overview">
@@ -310,14 +321,14 @@
         <li><strong>Code Reviewer Agent</strong> — PR 단위 정적 분석 (인증·인가·입력 검증·민감 정보 노출)</li>
         <li><strong>False Positive Validator Agent</strong> — 데이터 흐름·기존 보안 통제 역추적, 실제 익스플로잇 가능성 재검증</li>
         <li><strong>Pentest Validator Agent</strong> — staging 환경 동적 PoC로 결론 확정</li>
-        <li>며칠 단위로 걸리던 보안 리뷰를 <span class="highlight-num">PR 단위로 압축</span>, 보안팀이 비즈니스 로직 결함·권한 설계에 집중할 시간 확보</li>
+        <li>리뷰 소요 시간을 <span class="highlight-num">며칠 → PR 단위로 단축</span>, 보안팀이 비즈니스 로직 결함·권한 설계 검토에 더 집중</li>
       </ul>
       <div class="stack-box">Stack · Claude AI Agent · FastAPI · n8n · GitHub Actions · Python · Jira API</div>
     </div>
 
     <!-- Achievement 2 -->
     <div class="achievement">
-      <p class="achievement-title">거래소 보안 평가(CER) D → AAA 등급 견인 — <span class="highlight-num">90점 · 글로벌 10위</span></p>
+      <p class="achievement-title">거래소 보안 평가(<a href="https://cer.live/exchange/flipster" class="external-link">CER.live</a>) D → AAA 등급 견인 — <span class="highlight-num">90점 · 글로벌 10위</span></p>
       <ul class="bullets">
         <li>User Security 기능 신규 런칭 — Anti-Phishing Code · Device Management · Withdrawal Whitelist</li>
         <li>1년 내 <span class="highlight-num">D → AA(2025.05) → AAA(2025.08)</span> 3단계 등급 견인</li>
@@ -427,7 +438,7 @@
   <div>
     <h2>Education</h2>
     <p style="font-weight: 600;">국립금오공과대학교</p>
-    <p class="role-meta">소프트웨어 공학 학사 · 2012.03 — 2019.08 (군 복무 포함)</p>
+    <p class="role-meta">소프트웨어 공학 학사 · 2019.08 졸업</p>
   </div>
   <div>
     <h2>Certifications</h2>
@@ -439,10 +450,11 @@
 </section>
 
 <!-- LINKS -->
-<section>
+<section class="links-section">
   <h2>Links</h2>
-  <p>Blog · <span class="mono">kukuwhy.github.io</span></p>
-  <p>GitHub · <span class="mono">github.com/kukuwhy</span></p>
+  <p>Resume · <a href="https://kukuwhy.github.io/Resume/" class="mono">kukuwhy.github.io/Resume</a></p>
+  <p>Blog · <a href="https://kukuwhy.github.io/" class="mono">kukuwhy.github.io</a></p>
+  <p>GitHub · <a href="https://github.com/kukuwhy" class="mono">github.com/kukuwhy</a></p>
 </section>
 
 </div>
